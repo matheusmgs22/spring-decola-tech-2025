@@ -19,21 +19,22 @@ O objetivo principal deste projeto é aplicar os conhecimentos adquiridos durant
 
 1. **Clonar o Repositório**:
 
-   ```bash
+```bash
    git clone https://github.com/matheusmgs22/spring-decola-tech-2025.git
-   ```
+```
 
 2. **Navegar até o Diretório do Projeto**:
 
-  ```bash
+```bash
     cd spring-decola-tech-2025
-  ```
+```
 3. **Compilar e Executar a Aplicação**:
 
-    Utilize o Gradle para compilar e iniciar a aplicação:
-  ```bash
+Utilize o Gradle para compilar e iniciar a aplicação:
+
+```bash
     ./gradlew bootRun
-  ```
+```
 A aplicação estará disponível em http://localhost:8080.
 
 
