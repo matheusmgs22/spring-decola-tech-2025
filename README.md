@@ -1,59 +1,63 @@
-# Spring Decola Tech 2025
+# Spring Decola Tech 2025 🚀
 
 Este projeto consiste em uma API RESTful desenvolvida em Java utilizando o Spring Boot, criada durante o Bootcamp Decola Tech 2025, promovido pela Digital Innovation One (DIO) em parceria com a Avanade. ([dio.me](https://www.dio.me/))
 
-## Objetivo do Projeto
+## Tecnologias Utilizadas 💻
 
-O objetivo principal deste projeto é aplicar os conhecimentos adquiridos durante o bootcamp, desenvolvendo uma API robusta e escalável com Spring Boot. A API foi projetada para gerenciar operações essenciais, como criação, leitura, atualização e exclusão (CRUD) de registros, garantindo eficiência e segurança.
+### Principais Stack
+![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.2-green?logo=springboot&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-3.2-blue?logo=spring&logoColor=white)
+![Spring Web](https://img.shields.io/badge/Spring_Web-3.2-brightgreen?logo=spring&logoColor=white)
 
-## Tecnologias Utilizadas
+### Banco de Dados
+![H2 Database](https://img.shields.io/badge/H2_Database-2.1.214-yellow?logo=h2&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.2-blue?logo=postgresql&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-2.0-000?logo=railway&logoColor=white)
 
-- **Java 21**: Linguagem de programação utilizada para o desenvolvimento da aplicação.
-- **Spring Boot**: Framework que simplifica a criação de aplicações Java baseadas em Spring.
-- **Spring Data JPA**: Facilita a interação com bancos de dados relacionais.
-- **Spring Web**: Suporte para criação de aplicações web, incluindo RESTful APIs.
-- **Banco de Dados H2**: Utilizado para testes em memória durante o desenvolvimento.
-- **Banco de Dados PostgreSQL no Railway**: Implementação para ambientes de produção.
+### Acessando o Projeto 🌐
 
-## Como Executar o Projeto
+#### **API (Produção)**
+- **URL:** [https://spring-decola-tech-2025-production-afd1.up.railway.app/swagger-ui/index.html](https://spring-decola-tech-2025-production-afd1.up.railway.app/swagger-ui/index.html)
+- **Descrição:** Endpoint da API em ambiente de produção, hospedado no Railway.
 
-1. **Clonar o Repositório**:
+#### **Swagger UI (Local)**
+- **URL:** [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+- **Descrição:** Interface do Swagger para visualização e teste dos endpoints da API localmente.
 
-```bash
-   git clone https://github.com/matheusmgs22/spring-decola-tech-2025.git
-```
+#### **H2 Console (Local)**
+- **URL:** [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+- **Descrição:** Console do banco de dados H2 para acesso e gerenciamento dos dados durante o desenvolvimento.
 
-2. **Navegar até o Diretório do Projeto**:
+### Galeria do Projeto 📸
 
-```bash
-    cd spring-decola-tech-2025
-```
-3. **Compilar e Executar a Aplicação**:
+Aqui estão algumas imagens que mostram o funcionamento e a estrutura do projeto:
 
-Utilize o Gradle para compilar e iniciar a aplicação:
-
-```bash
-    ./gradlew bootRun
-```
-A aplicação estará disponível em http://localhost:8080.
-
-
-## Endpoints Disponíveis
-
-A API oferece os seguintes endpoints para interação:
-
-- `GET /api/entidade`: Lista todos os registros da entidade.
-- `GET /api/entidade/{id}`: Obtém um registro específico pelo ID.
-- `POST /api/entidade`: Cria um novo registro.
-- `PUT /api/entidade/{id}`: Atualiza um registro existente.
-- `DELETE /api/entidade/{id}`: Remove um registro pelo ID.
-
-*Substitua "entidade" pelo nome real da entidade implementada.*
-
-## Agradecimentos
-
-Gostaria de agradecer à DIO.me e à Avanade pela oportunidade de participar deste bootcamp e por disponibilizarem todo o conteúdo valioso. A experiência tem sido extremamente enriquecedora para mim, não apenas no desenvolvimento de habilidades técnicas, mas também no crescimento pessoal e profissional.
-
-Este projeto tem cunho educacional, sinta-se à vontade para utilizá-lo, adaptá-lo e explorá-lo para fins de aprendizado e desenvolvimento.
+#### 1. **Swagger UI**
+![Swagger UI](./assets/swagger_create.png)
 
 
+#### 2. **Banco Postgre no Railway**
+![Banco no Railway](./assets/postgre_railway.png)
+
+
+#### 3. **Funcionamento do Banco**
+![Projeto Finalizado](./assets/projeto_finalizado.png)
+
+
+## Conclusão 🏁
+
+O projeto da API spring foi uma experiência enriquecedora que me permitiu aplicar os conhecimentos adquiridos no Bootcamp Decola Tech, promovido pela Digital Innovation One em parceria com a Avanade. Através do desenvolvimento desta API RESTful com Spring Boot, pude:
+
+- Implementar operações CRUD completas e eficientes.
+- Integrar a API com bancos de dados (H2 para desenvolvimento e PostgreSQL para produção).
+- Documentar a API de forma clara e acessível usando Swagger UI.
+- Configurar múltiplos ambientes e realizar o deploy no Railway.
+
+### Principais Aprendizados 📚
+- Domínio do ecossistema Spring Boot e suas principais bibliotecas.
+- Boas práticas de desenvolvimento, como organização de código e tratamento de exceções.
+- Experiência prática com deploy em nuvem e integração contínua
+
+
+Agradeço à [Digital Innovation One](https://www.dio.me/) e à [Avanade](https://www.avanade.com/) por esta oportunidade incrível de aprendizado e crescimento profissional!
