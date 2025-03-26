@@ -1,0 +1,30 @@
+<div class="user-list">
+    <h2>Lista de Usuários</h2>
+
+    <div *ngIf="isLoading">Carregando...</div>
+
+    <table *ngIf="!isLoading">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Conta</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.account?.number }}</td>
+          <td>
+            <a [routerLink]="['/users', user.id]">Ver</a>
+            <a [routerLink]="['/users', user.id, 'edit']">Editar</a>
+            <button (click)="deleteUser(user.id)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a routerLink="/users/new" class="add-button">Novo Usuário</a>
+  </div>

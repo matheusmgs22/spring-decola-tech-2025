@@ -19,18 +19,30 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable Long id) {
+    public ResponseEntity<User> findById(@PathVariable Long id) { // GET
         var user = userService.findById(id);
         return ResponseEntity.ok(user);
     }
 
     @PostMapping
-    public ResponseEntity<User> create(@RequestBody User userToCreate) {
+    public ResponseEntity<User> create(@RequestBody User userToCreate) { // POST
         var userCreated = userService.create(userToCreate);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(userCreated.getId())
                 .toUri();
         return ResponseEntity.created(location).body(userCreated);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User userToUpdate) { // PUT
+        var userUpdated = userService.update(id, userToUpdate);
+        return ResponseEntity.ok(userUpdated);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id) { // DELETE
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }

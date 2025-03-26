@@ -1,0 +1,24 @@
+<div class="user-details">
+    <div *ngIf="isLoading">Carregando usuário...</div>
+
+    <div *ngIf="!isLoading && user">
+      <h2>Detalhes do Usuário</h2>
+
+      <div class="user-info">
+        <p><strong>ID:</strong> {{ user.id }}</p>
+        <p><strong>Nome:</strong> {{ user.name }}</p>
+
+        <h3>Conta Bancária</h3>
+        <p><strong>Número:</strong> {{ user.account?.number }}</p>
+        <p><strong>Agência:</strong> {{ user.account?.agency }}</p>
+        <p><strong>Saldo:</strong> {{ user.account?.balance | currency }}</p>
+
+        <h3>Cartão</h3>
+        <p><strong>Número:</strong> {{ user.card?.number }}</p>
+        <p><strong>Limite:</strong> {{ user.card?.limit | currency }}</p>
+      </div>
+
+      <a [routerLink]="['/users', user.id, 'edit']" class="edit-button">Editar</a>
+      <a routerLink="/users" class="back-button">Voltar</a>
+    </div>
+  </div>
