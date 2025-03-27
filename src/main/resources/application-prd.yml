@@ -7,3 +7,9 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: validate
+# --- NOVAS CONFIGURAÇÕES PARA O FRONTEND ---
+  web:
+    resources:
+      static-locations: classpath:/static/  # Pasta onde o frontend será servido
+  mvc:
+    static-path-pattern: /**                # Garante que todas as rotas não-API caiam no frontend
