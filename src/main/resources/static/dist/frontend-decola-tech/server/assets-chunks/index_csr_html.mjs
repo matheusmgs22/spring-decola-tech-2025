@@ -9,6 +9,6 @@ export default `<!doctype html>
 <style>:root{--primary-color:#4361ee;--secondary-color:#3f37c9;--light-color:#f8f9fa;--dark-color:#212529;--success-color:#4bb543;--error-color:#cc0000}*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}</style><link rel="stylesheet" href="styles-RW6E3RMN.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-RW6E3RMN.css"></noscript></head>
 <body ngcm="">
   <app-root></app-root>
-<link rel="modulepreload" href="chunk-XMAESTAR.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-WZXGMRTC.js" type="module"></script></body>
+<link rel="modulepreload" href="chunk-XMAESTAR.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-PQKNM62S.js" type="module"></script></body>
 </html>
 `;
