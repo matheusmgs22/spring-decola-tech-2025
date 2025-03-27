@@ -1,37 +1,49 @@
 <div class="user-form">
-    <h2>{{ isEditMode ? 'Editar Usuário' : 'Novo Usuário' }}</h2>
+  <h2>{{ isEditMode ? 'Editar Usuário' : 'Novo Usuário' }}</h2>
 
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Nome:</label>
+      <input type="text" formControlName="name">
+      <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="error-message">
+        Nome é obrigatório (mínimo 3 caracteres)
+      </div>
+    </div>
+
+    <div formGroupName="account">
+      <h3><i class="fas fa-piggy-bank"></i> Conta Bancária</h3>
       <div class="form-group">
-        <label>Nome:</label>
-        <input type="text" formControlName="name">
-      </div>
-
-      <div formGroupName="account">
-        <h3>Conta Bancária</h3>
-        <div class="form-group">
-          <label>Número:</label>
-          <input type="text" formControlName="number">
-        </div>
-        <div class="form-group">
-          <label>Agência:</label>
-          <input type="text" formControlName="agency">
+        <label>Número:</label>
+        <input type="text" formControlName="number">
+        <div *ngIf="form.get('account.number')?.invalid && form.get('account.number')?.touched" class="error-message">
+          Número da conta inválido
         </div>
       </div>
-
-      <div formGroupName="card">
-        <h3>Cartão</h3>
-        <div class="form-group">
-          <label>Número:</label>
-          <input type="text" formControlName="number">
-        </div>
-        <div class="form-group">
-          <label>Limite:</label>
-          <input type="number" formControlName="limit">
-        </div>
+      <div class="form-group">
+        <label>Agência:</label>
+        <input type="text" formControlName="agency">
       </div>
+    </div>
 
-      <button type="submit">Salvar</button>
-      <a routerLink="/users">Cancelar</a>
-    </form>
-  </div>
+    <div formGroupName="card">
+      <h3><i class="fas fa-credit-card"></i> Cartão</h3>
+      <div class="form-group">
+        <label>Número:</label>
+        <input type="text" formControlName="number" placeholder="0000 0000 0000 0000">
+      </div>
+      <div class="form-group">
+        <label>Limite:</label>
+        <input type="number" formControlName="limit">
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="form.invalid">
+        <i class="fas fa-save"></i> Salvar
+      </button>
+      <a routerLink="/users">
+        <i class="fas fa-times"></i> Cancelar
+      </a>
+    </div>
+  </form>
+</div>

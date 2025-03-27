@@ -1,0 +1,24 @@
+.app-header {
+    background-color: #343a40;
+    padding: 1rem;
+
+    nav {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #495057;
+        }
+
+        &.active {
+          background-color: #007bff;
+        }
+      }
+    }
+  }
